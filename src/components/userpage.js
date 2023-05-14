@@ -27,13 +27,17 @@ fetchData()
    
     const handleDelete =async(id) => {
         try{
-        const deleteit = await axios.delete("http://localhost:4000/api/spread/",id)
+        const deleteit = await axios.delete("http://localhost:4000/api/spread/"+ id)
         dispatch({payload:deleteit.data})
         console.log("Deleted")
+        console.log(deleteit.data)
+        
         }catch{
             console.log("failed to delete")
         }
+        
     }
+   
         
     
   
