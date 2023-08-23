@@ -51,7 +51,7 @@ fetchData()
                     <div>
                             
                         <img src={`http://localhost:4000/${post?.imageUrl}`} alt='yea'/>
-                        <button onClick={(e)=>handleDelete(post._id)}>delete</button>
+                        <button onClick={()=>handleDelete(post._id)}>delete</button>
                          {console.log(post._id)}
                         </div>
 

@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 const Spread = () => {
  const [title, setTitle] = useState('')
  const [rumor, setRumor] = useState('')
-const [image,setImg] = useState('')
+// const [image,setImg] = useState('')
 
 
  
@@ -23,10 +23,11 @@ const history = useHistory()
 
 const handletheSubmit = async(e) => {
 e.preventDefault()
-const formData = new FormData()
-formData.append('title',title)
-formData.append('rumor',rumor)
-formData.append('image',image)
+const formData = {title,rumor} 
+// const formData = new FormData()
+// formData.append('title',title)
+// formData.append('rumor',rumor)
+// formData.append('image',image)
 
 // dispatch({type:"LOGIN_SUCCESS"})
 try {
@@ -61,6 +62,7 @@ style={{"height":"30px","width":'300px'}}
 />
 
 <input
+
 type="text"
  id="rumor"
  onChange={(e) => setRumor(e.target.value)}
@@ -70,14 +72,14 @@ style={{"height":"200px","width":'300px'}}
 />
 
 
- <input 
+ {/* <input 
 type="file"
 multiple
  id="image"
  onChange={(e) => setImg(e.target.files[0])}
  accept=".jpg,.jpeg,.png"
 
-/>
+/> */}
 
 <button onClick={handletheSubmit} style={{"height":"40px","width":'80px',"borderRadius":"12px","cursor":"pointer"}}>Spread</button>
 

@@ -33,10 +33,7 @@ const INITIAL_STATE = {
                         loading:false,
                         error:null
                     };
-                    // case "DELETE_IT":
-                    //     return{
-                    //         postit:state.
-                    //     }
+                  
                 
             default:
                 return state;

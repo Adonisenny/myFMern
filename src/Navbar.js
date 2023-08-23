@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext";
 import axios from "axios";
 
 const NavBar = () => {
-    const {user,dispatch} = useContext(AuthContext)
+    const  {user,dispatch} = useContext(AuthContext)
     console.log(user?.email)
     // const location = useLocation()
     // const pathName = location.pathname.split("/")[1]
